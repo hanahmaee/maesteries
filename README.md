@@ -1,8 +1,3 @@
-# React + Vite
+# Maesteries Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+THey bestie! 🚀 Welcome to Maesteries, the ultimate corner of the internet for writers, poets, and storytellers. Whether you’re here to drop some fire poetry, spill your next viral short story, or just vibe with fellow creatives, this is your space to shine.
