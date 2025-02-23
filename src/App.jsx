@@ -1,11 +1,10 @@
 import React from 'react'
+import Navbar from './components/NavBar/Navbar'
 
-const App = () => {
+const App = () => { 
   return (
-    <div>
-      <div className='container bg-amber-50 mx-auto'>
-        <h1 className='text-8xl text-bl'>tailwind</h1>
-      </div>
+    <div className='overflow-x-hidden'>
+      <Navbar/>
     </div>
   )
 }
