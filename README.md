@@ -1,3 +1,5 @@
 # Maesteries Haven
 
-THey bestie! 🚀 Welcome to Maesteries, the ultimate corner of the internet for writers, poets, and storytellers. Whether you’re here to drop some fire poetry, spill your next viral short story, or just vibe with fellow creatives, this is your space to shine.
+Hey, Neibies!
+
+This is a personal website for Maesteries (formerly NeifileTheDreamer). Here, the published stories, announcements, and story updates of Maesteries were featured. Readers can explore a collection of literary works, including novels and short stories. The website serves as a hub for engaging with fans through comments and discussions. Updates about upcoming projects and exclusive sneak peeks are also shared here. Maesteries continues to inspire and connect with readers through storytelling.
