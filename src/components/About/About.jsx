@@ -123,18 +123,22 @@ const About = () => {
             </p>
 
             <div className="w-full max-w-[95%] lg:max-w-[85%] relative">
-                <Swiper
-                    spaceBetween={-130}
-                    slidesPerView={3}
-                    centeredSlides={true}
-                    loop={true}
-                    navigation={{
-                        prevEl: '.swiper-button-prev',
-                        nextEl: '.swiper-button-next',
-                    }}
-                    modules={[Navigation]}
-                    className="relative"
-                >
+            <Swiper
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  breakpoints={{
+                      640: { slidesPerView: 2, spaceBetween: 20 },
+                      1024: { slidesPerView: 3, spaceBetween: 30 },
+                  }}
+                  centeredSlides={true}
+                  loop={true}
+                  navigation={{
+                      prevEl: '.swiper-button-prev',
+                      nextEl: '.swiper-button-next',
+                  }}
+                  modules={[Navigation]}
+                  className="relative w-full"
+              >
                     {slicedServiceData.map((item) => (
                       <SwiperSlide key={item.backgroundImage}>
                             <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -154,15 +158,17 @@ const About = () => {
                         </SwiperSlide>
                     ))}
 
-                    {/* Navigation Arrows */}
-                    <div className="swiper-button-prev !text-primary !left-[1%] !w-10 !h-full
-                        !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
-                        <BiSolidLeftArrowSquare className="!text-4xl md:!text-5xl" />
-                    </div>
-                    <div className="swiper-button-next !text-primary !right-[1%] !w-10 !h-full
-                        !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
-                        <BiSolidRightArrowSquare className="!text-4xl md:!text-5xl" />
-                    </div>
+                  {/* Navigation Arrows */}
+                  <div className="swiper-button-prev 
+                      !text-primary !left-2 !w-8 !h-8 md:!w-10 md:!h-10 lg:!w-12 lg:!h-12 
+                      !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
+                      <BiSolidLeftArrowSquare className="!text-3xl md:!text-4xl lg:!text-5xl" />
+                  </div>
+                  <div className="swiper-button-next 
+                      !text-primary !right-2 !w-8 !h-8 md:!w-10 md:!h-10 lg:!w-12 lg:!h-12 
+                      !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
+                      <BiSolidRightArrowSquare className="!text-3xl md:!text-4xl lg:!text-5xl" />
+                  </div>
                 </Swiper>
             </div>
         </div>
