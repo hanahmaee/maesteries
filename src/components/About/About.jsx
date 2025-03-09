@@ -3,17 +3,27 @@ import { motion } from "framer-motion";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare, FaFacebookSquare } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
-import bg from "../../assets/bg.png"; // Ensure image path is correct
+import bg from "../../assets/bg.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { ServiceData } from "../../constants/index";
+import { BiSolidLeftArrowSquare, BiSolidRightArrowSquare } from "react-icons/bi";
 
 const About = () => {
+  const slicedServiceData = ServiceData.slice(0, 9);
+
   return (
     <>
-      {/* Writer's Info Section */}
-      <div className="bg-gradient-to-b from-gray-200 to-white text-center pt-22">
+ {/* Writer's Info Section */}
+ <div className="bg-gradient-to-b from-gray-200 to-white text-center pt-22">
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }} // Increased duration & delay
+        transition={{ duration: 0.8, delay: 0.3 }}
         className="text-primary text-lg mb-1"
         >
         Hi, I’m
@@ -102,9 +112,61 @@ const About = () => {
             src={bg}
             alt="Books Display"
             className="w-[350px] md:w-[500px] lg:w-[650px]"
-          />
+          />       
         </div>
       </div>
+
+      {/* Book Slider */}
+        <div className="flex items-center justify-center flex-col py-8 md:py-12 relative">
+            <p className="text-primary text-xl md:text-4xl font-semibold mb-6 md:mb-10">
+                Read the maesterious stories now!
+            </p>
+
+            <div className="w-full max-w-[95%] lg:max-w-[85%] relative">
+                <Swiper
+                    spaceBetween={-130}
+                    slidesPerView={3}
+                    centeredSlides={true}
+                    loop={true}
+                    navigation={{
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    }}
+                    modules={[Navigation]}
+                    className="relative"
+                >
+                    {slicedServiceData.map((item) => (
+                      <SwiperSlide key={item.backgroundImage}>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                <div
+                                    className="relative shadow-lg text-white rounded-xl overflow-hidden cursor-pointer mx-auto transform scale-100 hover:scale-105 transition-transform duration-200"
+                                    style={{
+                                        width: '256px',
+                                        height: '400px',
+                                        backgroundImage: `url(${item.backgroundImage})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
+                                </div>
+                            </a>
+                        </SwiperSlide>
+                    ))}
+
+                    {/* Navigation Arrows */}
+                    <div className="swiper-button-prev !text-primary !left-[1%] !w-10 !h-full
+                        !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
+                        <BiSolidLeftArrowSquare className="!text-4xl md:!text-5xl" />
+                    </div>
+                    <div className="swiper-button-next !text-primary !right-[1%] !w-10 !h-full
+                        !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
+                        <BiSolidRightArrowSquare className="!text-4xl md:!text-5xl" />
+                    </div>
+                </Swiper>
+            </div>
+        </div>
+
     </>
   );
 };
