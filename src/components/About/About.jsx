@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare, FaFacebookSquare } from "react-icons/fa";
@@ -7,26 +7,40 @@ import bg from "../../assets/bg.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/free-mode";
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
 import { ServiceData } from "../../constants/index";
 import { BiSolidLeftArrowSquare, BiSolidRightArrowSquare } from "react-icons/bi";
 
 const About = () => {
+  const swiperRef = useRef(null);
   const slicedServiceData = ServiceData.slice(0, 9);
+
+  const prevSlide = () => {
+    if (swiperRef.current) {
+      const swiper = swiperRef.current.swiper;
+      swiper.slidePrev();
+    }
+  };
+
+  const nextSlide = () => {
+    if (swiperRef.current) {
+      const swiper = swiperRef.current.swiper;
+      swiper.slideNext();
+    }
+  };
 
   return (
     <>
- {/* Writer's Info Section */}
- <div className="bg-gradient-to-b from-gray-200 to-white text-center pt-22">
-      <motion.p
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="text-primary text-lg mb-1"
+      {/* Writer's Info Section */}
+      <div className="bg-gradient-to-b from-gray-200 to-white text-center pt-22">
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-primary text-lg mb-1"
         >
-        Hi, I’m
+          Hi, I’m
         </motion.p>
 
         <motion.h1
@@ -68,36 +82,16 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex gap-4 justify-center mt-6"
           >
-            <a
-              href="https://twitter.com/maesteries"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary text-3xl hover:text-opacity-80 cursor-pointer"
-            >
+            <a href="https://twitter.com/maesteries" target="_blank" rel="noopener noreferrer" className="text-primary text-3xl hover:text-opacity-80 cursor-pointer">
               <FaSquareXTwitter />
             </a>
-            <a
-              href="https://instagram.com/maesteries"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary text-3xl hover:text-opacity-80 cursor-pointer"
-            >
+            <a href="https://instagram.com/maesteries" target="_blank" rel="noopener noreferrer" className="text-primary text-3xl hover:text-opacity-80 cursor-pointer">
               <FaInstagramSquare />
             </a>
-            <a
-              href="https://www.facebook.com/neifile.steinitz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary text-3xl hover:text-opacity-80 cursor-pointer"
-            >
+            <a href="https://www.facebook.com/neifile.steinitz" target="_blank" rel="noopener noreferrer" className="text-primary text-3xl hover:text-opacity-80 cursor-pointer">
               <FaFacebookSquare />
             </a>
-            <a
-              href="https://tiktok.com/@maesteries"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary text-3xl hover:text-opacity-80 cursor-pointer"
-            >
+            <a href="https://tiktok.com/@maesteries" target="_blank" rel="noopener noreferrer" className="text-primary text-3xl hover:text-opacity-80 cursor-pointer">
               <AiFillTikTok />
             </a>
           </motion.div>
@@ -112,67 +106,62 @@ const About = () => {
             src={bg}
             alt="Books Display"
             className="w-[350px] md:w-[500px] lg:w-[650px]"
-          />       
+          />
         </div>
       </div>
 
-      {/* Book Slider */}
-        <div className="flex items-center justify-center flex-col py-8 md:py-12 relative">
-            <p className="text-primary text-xl md:text-4xl font-semibold mb-6 md:mb-10">
-                Read the maesterious stories now!
-            </p>
+      {/* Story Carousel */}
+      <div className="flex flex-col items-center py-8 px-4 w-full">
+        <h2 className="text-brown-700 text-xl font-semibold mb-4 text-center">
+          Read the <span className="font-bold">maesterious</span> stories now!
+        </h2>
 
-            <div className="w-full max-w-[95%] lg:max-w-[85%] relative">
+        <div className="relative flex flex-col justify-center items-center w-full max-w-4xl">
+          {/* Swiper Carousel */}
+          <div className="relative w-full">
             <Swiper
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  breakpoints={{
-                      640: { slidesPerView: 2, spaceBetween: 20 },
-                      1024: { slidesPerView: 3, spaceBetween: 30 },
-                  }}
-                  centeredSlides={true}
-                  loop={true}
-                  navigation={{
-                      prevEl: '.swiper-button-prev',
-                      nextEl: '.swiper-button-next',
-                  }}
-                  modules={[Navigation]}
-                  className="relative w-full"
-              >
-                    {slicedServiceData.map((item) => (
-                      <SwiperSlide key={item.backgroundImage}>
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                <div
-                                    className="relative shadow-lg text-white rounded-xl overflow-hidden cursor-pointer mx-auto transform scale-100 hover:scale-105 transition-transform duration-200"
-                                    style={{
-                                        width: '256px',
-                                        height: '400px',
-                                        backgroundImage: `url(${item.backgroundImage})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                    }}
-                                >
-                                    <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                    ))}
+              ref={swiperRef}
+              slidesPerView={3}
+              spaceBetween={20}
+              freeMode={true}
+              pagination={{ clickable: true }} // Using Swiper's built-in pagination
+              modules={[FreeMode, Pagination]}
+              className="w-full"
+            >
+              {slicedServiceData.map((story, index) => (
+                <SwiperSlide key={index} className="p-7 flex justify-center">
+                  <div className="p-4 rounded-xl shadow-md transition-all duration-500 w-60">
+                    <img 
+                      src={story.backgroundImage} 
+                      alt={`Story ${index}`} 
+                      className="w-full h-85 object-cover rounded-md" 
+                    />
+                    <h3 className="text-lg font-bold mt-2 text-center">{story.title}</h3>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-                  {/* Navigation Arrows */}
-                  <div className="swiper-button-prev 
-                      !text-primary !left-2 !w-8 !h-8 md:!w-10 md:!h-10 lg:!w-12 lg:!h-12 
-                      !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
-                      <BiSolidLeftArrowSquare className="!text-3xl md:!text-4xl lg:!text-5xl" />
-                  </div>
-                  <div className="swiper-button-next 
-                      !text-primary !right-2 !w-8 !h-8 md:!w-10 md:!h-10 lg:!w-12 lg:!h-12 
-                      !top-1/2 !-translate-y-1/2 after:!content-none hover:!opacity-80">
-                      <BiSolidRightArrowSquare className="!text-3xl md:!text-4xl lg:!text-5xl" />
-                  </div>
-                </Swiper>
-            </div>
+            {/* Left Arrow */}
+            <button 
+              onClick={prevSlide} 
+              className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 p-2
+              rounded-full text-4xl text-primary hover:text-secondary transition"
+            >
+              <BiSolidLeftArrowSquare />
+            </button>
+
+            {/* Right Arrow */}
+            <button 
+              onClick={nextSlide} 
+              className="absolute right-[-50px] top-1/2 transform -translate-y-1 p-2
+              rounded-full text-4xl text-primary hover:text-secondary transition"
+            >
+              <BiSolidRightArrowSquare />
+            </button>
+          </div>
         </div>
-
+      </div>
     </>
   );
 };
