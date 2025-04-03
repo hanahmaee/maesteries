@@ -18,6 +18,11 @@ import B8 from "../assets/B8.png";
 import B9 from "../assets/B9.png";
 
 export const ServiceData = [
+    {
+        icon: RxRocket,
+        backgroundImage: B1,
+        link: "https://www.wattpad.com/story/188526177-his-woeful-stare-sixth-of-ace-xeidrine-%E2%9C%93", // Replace with the actual link
+    },
   {
   icon: RxRocket,
   backgroundImage: B2,
@@ -58,9 +63,5 @@ export const ServiceData = [
       backgroundImage: B9,
       link: "https://www.wattpad.com/story/235614202-clench-of-poverty-tres-publicos", // Replace with the actual link
   },
-  {
-      icon: RxRocket,
-      backgroundImage: B1,
-      link: "https://www.wattpad.com/story/188526177-his-woeful-stare-sixth-of-ace-xeidrine-%E2%9C%93", // Replace with the actual link
-  },
+
 ];
