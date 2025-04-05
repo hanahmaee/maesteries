@@ -31,7 +31,7 @@ const Footer = () => {
               className="flex flex-col items-center bg-primary text-white px-4 py-2 rounded-md text-xs font-semibold transition hover:bg-secondary hover:scale-105"
             >
               <FaInstagram className="text-white text-lg mb-1" />
-              <span>@neifile_steinitz</span>
+              <span>@maesteries</span>
             </a>
 
             <a
