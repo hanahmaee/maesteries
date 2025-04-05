@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io"; // Close icon
-import { NavbarMenu } from "../../mockData/data";
+import { NavbarMenu } from "../../mockData/data"; // Import NavbarMenu data
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
