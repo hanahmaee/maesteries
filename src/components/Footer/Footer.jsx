@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       {/* Shadow Line Before Footer */}
-      <div className="w-full h-1 bg-gray-400 shadow-lg opacity-75"></div>
+      <div className="w-full h-1 bg-gray-400 shadow-lg opacity-25"></div>
       
       <footer className="bg-white py-6 text-center shadow-md">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 items-center text-center space-y-4 md:space-y-0">

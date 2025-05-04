@@ -3,8 +3,8 @@ import { ServiceData } from "../../constants/index";
 
 const Library = () => {
   return (
-    <div className="min-h-screen bg-[#FDF7F2] pt-28 pb-12 px-4 sm:px-8">
-      <h1 className="text-4xl font-extrabold text-center text-[#4B2C20] mb-12">
+    <div className="min-h-screen pt-24 pb-12 px-4 sm:px-8">
+      <h1 className="text-4xl font-extrabold text-center text-[#4B2C20] mb-6">
         Published Stories
       </h1>
 
@@ -16,7 +16,7 @@ const Library = () => {
             <a
               href={service.link}
               key={index}
-              className="flex bg-white rounded-xl border border-[#D6B79E] shadow-md overflow-hidden hover:shadow-lg transition"
+              className="flex rounded-xl border border-[#D6B79E] shadow-md overflow-hidden hover:shadow-lg transition"
               target="_blank"
               rel="noopener noreferrer"
             >
