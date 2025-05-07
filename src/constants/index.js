@@ -25,7 +25,7 @@ import {
       link: "https://www.wattpad.com/story/188526177-his-woeful-stare-sixth-of-ace-xeidrine-%E2%9C%93",
       genre: "Fantasy, Romance",
       status: "Ongoing",
-      chapters: 12,
+      chapters: 47,
     },
     {
       icon: RxRocket,
@@ -34,7 +34,7 @@ import {
       link: "https://www.wattpad.com/story/224393400-brows-of-the-past-sixth-of-ace-axti-%E2%9C%93",
       genre: "Historical Fiction",
       status: "Completed",
-      chapters: 20,
+      chapters: 46,
     },
     {
       icon: RxCrop,
@@ -43,7 +43,7 @@ import {
       link: "https://www.wattpad.com/story/231042595-eyes-of-imperfection-sixth-of-ace-coast",
       genre: "Mystery, Thriller",
       status: "Ongoing",
-      chapters: 8,
+      chapters: 40,
     },
     {
       icon: RxPencil2,
@@ -52,7 +52,7 @@ import {
       link: "https://www.wattpad.com/story/231042746-his-distinctive-steps-sixth-of-ace",
       genre: "Drama, Romance",
       status: "Completed",
-      chapters: 15,
+      chapters: 4,
     },
     {
       icon: RxDesktop,
@@ -61,7 +61,7 @@ import {
       link: "https://www.wattpad.com/story/231043358-chasing-nostalgic-memories-sixth-of-ace",
       genre: "Adventure, Romance",
       status: "Ongoing",
-      chapters: 10,
+      chapters: 2,
     },
     {
       icon: RxReader,
@@ -70,7 +70,7 @@ import {
       link: "https://www.wattpad.com/story/231043098-walk-beyond-barricades-sixth-of-ace",
       genre: "Action, Fantasy",
       status: "Ongoing",
-      chapters: 14,
+      chapters: 3,
     },
     {
       icon: RxAccessibility,
@@ -79,7 +79,7 @@ import {
       link: "https://www.wattpad.com/story/235614042-grasp-of-the-infinity-tres-publicos",
       genre: "Sci-Fi, Thriller",
       status: "Ongoing",
-      chapters: 5,
+      chapters: 4,
     },
     {
       icon: RxRocket,
@@ -88,7 +88,7 @@ import {
       link: "https://www.wattpad.com/story/235614126-his-unbreakable-hands-tres-publicos",
       genre: "Action, Drama",
       status: "Completed",
-      chapters: 18,
+      chapters: 2,
     },
     {
       icon: RxRocket,
@@ -97,7 +97,7 @@ import {
       link: "https://www.wattpad.com/story/235614202-clench-of-poverty-tres-publicos",
       genre: "Social Issues, Drama",
       status: "Ongoing",
-      chapters: 22,
+      chapters: 2,
     },
   ];
   
