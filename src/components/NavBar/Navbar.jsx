@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { TiThMenu } from "react-icons/ti";
-import { IoMdClose } from "react-icons/io"; // Close icon
-import { NavbarMenu } from "../../mockData/data"; // Import NavbarMenu data
+import { IoMdClose } from "react-icons/io";
+import { NavbarMenu } from "../../mockData/data"; 
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,13 @@ const Navbar = () => {
       <nav className="shadow-md bg-white fixed top-0 left-0 w-full z-50">
         <div className="container flex justify-between items-center py-4 px-6">
           {/* Website Name Section */}
-          <div className="text-2xl font-bold text-primary transition hover:text-secondary">
-            Maesteries
-          </div>
+          <Link
+              to="/home"
+              className="text-2xl font-bold text-primary transition hover:text-secondary"
+            >
+              Maesteries
+            </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center items-center gap-8">
