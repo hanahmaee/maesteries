@@ -52,7 +52,7 @@ const Library = () => {
                 <div className="mt-4">
                   <span
                     className={`block py-2 px-4 text-center font-semibold text-base transition
-                      bg-primary text-white rounded-lg hover:bg-secondary hover:scale-105`}
+                      bg-[#6B2C14] text-white rounded-lg hover:bg-secondary hover:scale-105`}
                   >
                     Read on Wattpad
                   </span>
