@@ -101,3 +101,28 @@ import {
     },
   ];
   
+  // index.js (in constants folder)
+
+export const announcements = [
+  {
+    date: "April 05, 2025",
+    title: "BOOK TWO IS COMING!",
+    body: `The journey isn’t over yet—it’s just getting started! After the twists, challenges, and unforgettable moment of His Woeful Stare, get ready to dive into Blueprint of Destiny! This time, friendships will be tested, dreams will be chased, and new struggles will arise as our characters navigate the next chapter of their lives.
+
+Will they overcome their fears and doubts? Can they handle the pressure of expectations? And most importantly—will they make the right choices for their future?`,
+  },
+  {
+    date: "January 01, 2025",
+    title: "FINALLY GOING BACK TO WRITING!",
+    body: `After a long break, the words are calling me back—and I’m answering! This 2025, I’m diving back into writing, bringing new stories, deeper emotions, and unforgettable characters to life. Whether it’s a continuation of past works or something entirely new, I’m beyond excited to share this journey with you all!
+
+Expect plot twists, late-night writing sessions, and a whole lot of feels. To everyone who’s been waiting, supporting, and believing—this is for you.`,
+  },
+  {
+    date: "November 04, 2023",
+    title: "LOSING MY PEN…",
+    body: `Sometimes, the best stories need a little pause. For now, I’m stepping away from writing to rest, reflect, and recharge. Life gets busy, inspiration shifts, and creativity needs time to breathe—but this isn’t goodbye. Just a break.
+
+To everyone who has supported my work, thank you for your patience and understanding. I’ll be back with fresh ideas, new stories, and even more passion for writing. Until then, keep dreaming, keep reading, and I’ll see you soon!`,
+  },
+];
