@@ -103,7 +103,7 @@ import {
   
   // index.js (in constants folder)
 
-const announcements = [
+export const announcements = [
   {
     date: "April 05, 2025",
     title: "BOOK TWO IS COMING!",

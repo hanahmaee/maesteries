@@ -15,7 +15,7 @@ import {
   BiSolidRightArrowSquare,
 } from "react-icons/bi";
 
-const About = () => {
+const Home = () => {
   const swiperRef = useRef(null);
   const slicedServiceData = ServiceData.slice(0, 9);
 
@@ -165,12 +165,19 @@ const About = () => {
             >
               {slicedServiceData.map((story, index) => (
                 <SwiperSlide key={index} className="flex justify-center">
-                  <div className="w-full max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] transition-all duration-500 mx-auto">
+                  <div className="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[280px] lg:max-w-[320px] transition-all duration-500 mx-auto">
+                    <a
+                      href={story.link}  // Link from ServiceData
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
                     <img
                       src={story.backgroundImage}
                       alt={`Story ${index}`}
                       className="w-full h-auto object-cover rounded-md shadow-md"
                     />
+                    </a>
                     <h3 className="text-sm sm:text-base md:text-lg font-bold mt-2 text-center">
                       {story.title}
                     </h3>
@@ -201,4 +208,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;
